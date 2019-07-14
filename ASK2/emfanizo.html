@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	
+		<meta charset = "UTF-8">
+		
+		
+	</head>
+	<body>
+	<div style="border-style:solid; border-color:red; background-color:black; color:white;">
+	<div style="margin-left:5px; margin-bottom:5px; margin-top:5px;">
+	<script LANGUAGE="JavaScript">
+		function getParams(){
+			var idx = document.URL.indexOf('?');
+			var params = new Array();
+				if (idx != -1) {
+					var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+					for (var i=0; i<pairs.length; i++){
+						nameVal = pairs[i].split('=');
+						params[nameVal[0]] = nameVal[1];
+						}
+					}
+			return params;
+			}
+			params = getParams();
+			onoma = unescape(params["onoma"]);
+			email = unescape(params["email"]);
+			ilikia = unescape(params["ilikia"]);
+			pl = unescape(params["pl"]);
+			city = unescape(params["city"]);
+			document.write("Εδώ θα εμφανιστούν οι καταχωρήσεις" + "<br>" );
+			document.write("-----------------------------------------" + "<br>");
+			document.write("Ονοματεπώνυμο = " + onoma + "<br>");
+			document.write("E-mail = " + email + "<br>");
+			document.write("Ηλικία = " + ilikia + "<br>");
+			document.write("Κατηγορία = " + pl + "<br>");
+			document.write("Περιοχή = " + city + "<br>");
+	</script>
+	</div>
+	</div>
+	</body>
+</html>

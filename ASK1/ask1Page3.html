@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>  Χώρες της Ευρώπης </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $('#table1').fadeIn(1000);
+   
+  });
+});
+</script>
+	
+	
+<script>
+$(document).ready(function(){
+  $("#button2").click(function(){
+    $('#table1').fadeOut(1000);
+   
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>	
+
+
+<script> 
+$(document).ready(function(){
+  $("#b1").click(function(){
+    $("div").animate({left: '250px'});
+  });
+});
+</script> 
+
+
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("aside").css("background-color", "pink");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("nav").css("background-color", "pink");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("section").css("background-color", "gold");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("header").css("background-color", "blue");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("footer").css("background-color", "red");
+  });
+});
+</script>
+</head>
+<body>
+<div id="row" class="wrapper">
+<header class="header">
+   <h1>Χώρες της Ευρώπης</h1>
+</header>
+  
+<nav id="col-1 menu" class="aside aside-1">
+  <ul>
+    <li><a href="index.html">Ελλάδα</a></li></br>
+    <li><a href="ask1Page2.html">Γερμανία</a></li></br>
+    <li><a href="ask1Page2.html">Γαλλία</a></li>
+  </ul>
+</nav>
+
+<aside class="aside aside-2">  <br/> <a href="index.html">Επιστροφή<br/> στην Αρχική<br/> Σελίδα<br/></a></aside>
+
+<section id="col-2"  class="main"> 
+      <h1>Γαλλία</h1>
+		
+        <img  src="france.jpg" alt="france image" width="100" height="100" />
+		
+		
+		<button id="hide">Hide</button>
+		<button id="show">Show</button>
+        <p id="p">  <a href="ask1Page3.html"> Η Γαλλία </a> (γαλλικά: France, ΔΦΑ [fʁɑ̃s], επίσημη ονομασία: Γαλλική Δημοκρατία, γαλλικά:
+		République française, ΔΦΑ ​[ʁepyblik fʁɑ̃sɛz]) είναι μία ενιαία, ημιπροεδρική δημοκρατία,
+		της οποίας το μεγαλύτερο μέρος των εδαφών και του πληθυσμού βρίσκεται στη <a href="https://el.wikipedia.org/wiki/Δυτική_Ευρώπη">Δυτική Ευρώπη</a>,
+		αλλά που περιλαμβάνει επίσης πολλές περιοχές και εδάφη διάσπαρτα σε ολόκληρη την υφήλιο.
+		Έχει πρωτεύουσα το <a href="https://el.wikipedia.org/wiki/Παρίσι">Παρίσι</a>, επίσημη γλώσσα την γαλλική και νόμισμα το ευρώ.
+        </p> 
+		<img src="france2.jpg" alt="france image" width="100" height="100" />
+        <p id="p">Το σύνθημά της είναι «Ελευθερία, Ισότητα, Αδερφοσύνη»,
+		και η σημαία της αποτελείται από τρεις κάθετες λωρίδες χρώματος μπλε,
+		άσπρου και κόκκινου. Ο ύμνος της είναι Η Μασσαλιώτιδα.
+		Η συνταγματική αρχή της είναι «κυβέρνηση του λαού, από τον λαό και υπέρ του λαού»[4].
+        </p> 
+		
+		<button id="button1">Click to fade in table</button><br><br>
+		
+		<table id="table1" border=2  bordercolor="blue">
+		<tr>
+			<td align="center" colspan="4" width="100">Γαλλια</td>
+		</tr>
+		<tr>
+			<td width="100">a</td>
+			<td width="100">b</td>
+			<td width="100">c</td>
+			<td width="100">d</td>
+			
+		</tr>
+		
+		<tr>
+			<td width="100" height="100" rowspan="2" colspan="2" >  <img src="paris.jpg" alt="Paris image" width="100%" height="100%" /> </td>
+			<td width="100" height="100" rowspan="2" colspan="2" >  <img src="marseille.jpg" alt="marseille image" width="100%" height="100%" /> </td>
+			
+			
+		</tr>
+		
+</table>
+<br>
+<button id="button2">Click to fade out table</button><br><br>
+<button id="b1">Start Animation</button> <br><br>
+<div id="flag">
+    
+</div>
+<button id="button3">Change background-color</button><br><br>
+
+</section>
+
+<footer class="footer">Copyright &copy; Europe</footer>
+</div>
+</body>
+</html>

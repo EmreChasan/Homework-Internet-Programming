@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset = "UTF-8">
+		
+		<title> ASKISI 2 </title>
+		<link rel = "stylesheet" href ="main.css"/>
+	</head>
+
+	<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+<h1 style="background-color:blue;  text-align:center; color:white; padding:10px 40px;"> Φόρμα Επικοινωνίας </h1>
+	
+	
+	
+	
+	<form name="form1"	action="emfanizo.html" method = "get" style="border-style:solid; border-color:black; background:-webkit-linear-gradient(#fff,#f8b500);"> <!-- background einai gia Chrome10+,Safari5.1+ -->
+		
+		
+			<div style="margin-left:5px;">
+			<h2> Συμπληρώστε τα παρακάτω στοιχέια </h2>
+			<p>
+				<label for="Ονοματεπώνυμο">Ονοματεπώνυμο:</label><input onkeypress="letter(event)" type="text" name="onoma" id="onoma" required>
+				
+			</p>
+			Ηληκία(διαλέξτε ένα από παρακάτω)</br>
+			<input type="radio" name="ilikia" value="Up to 17" > Εως 17<br>
+			<input type="radio" name="ilikia" value="From 18 to 30"> Από 18 εως 30<br>
+			<input type="radio" name="ilikia" value="From 30 to 40"> Από 30 εως 40<br>
+			<input type="radio" name="ilikia" value="From 41 to 55" > Από 41 εως 55<br>
+			<input type="radio" name="ilikia" value="From 56 to 65"> Από 56 εως 65<br>
+			<input type="radio" name="ilikia" value="Over 65"> Πάνω από 65 <br>
+			<p>
+			Τι πληροφορίες θέλατε(διαλέξτε όσα θέλετε):<br>
+			<div id="checkboxlist">
+			 <input type="checkbox" name="pl" value="Hotels"  class="chk" id="myCheck"  /> Ξενοδοχέια<br/>
+			 <input type="checkbox" name="pl" value="Museums" class="chk" id="myCheck"  /> Μουσεία<br/>
+			 <input type="checkbox" name="pl" value="Sights" class="chk" id="myCheck" /> Αξιοθέατα <br/>
+			 <input type="checkbox" name="pl" value="Restaurants-Food" class="chk" id="myCheck"  /> Εστιατόρια-Φαγητό <br/>
+			</p>
+			</div>
+				
+				<p>
+				Περιοχή που σας ενδιαφέρει: <br>
+				<select name="city" multiple> 
+				<option value="Macedonia">Μακεδονία </option>
+				<option value="Cyclades">Κυκλάδες </option>
+				<option value="Thrace">Θράκη </option>
+				<option value="Another">Άλλη </option>
+			</select>
+			
+			</p>
+			
+			<p>
+				<label for="email"> E-mail:</label><input type="email" name="email" id="email" required>
+				
+			</p>
+			
+			
+			
+			<p>
+			<input id="buttonClass" type="submit" value="Υποβολή-Δείξε τα στοιχέια" /> <input type="reset" value="Καθάρισμα"/>  <br/>  <br/>
+			
+			</p>
+			<br/>
+			
+			<script>
+				$(document).ready(function () {
+	/ * pairnei value ton checkbox * /
+				$("#buttonClass").click(function() {
+					getValueUsingClass();
+					window.location.reload();
+	});
+
+	
+});
+
+function getValueUsingClass(){
+	var chkArray = [];
+
+	/ * anazitisi kai elegxos ton checkbox * /
+	$(".chk:checked").each(function() {
+		chkArray.push($(this).val());
+	});
+
+	var selected;
+	selected = chkArray.join(',') + ",";
+
+	if(selected.length > 1){
+		
+	}else{
+		alert(" Επιλέξτε τουλάχιστον ένα από τις πληροφορίες");
+		window.location.reload();
+	}
+}
+
+
+    </script> 
+	
+	
+	
+
+
+			
+		</div>
+		 <script>
+	 
+				var data= document.getElementById("email");	
+				data.setAttribute("maxlength","15");
+
+			
+			
+		</script>
+		
+		<script>
+	 
+				//var datae= document.getElementById("onoma");	
+				//datae.setAttribute("pattern","A-Za-z");
+				
+				
+				function letter(e) {
+
+					prcs = document.all ? window.event : e;
+
+					chrctr = document.all ? prcs.keyCode : prcs.which;
+
+				if(chrctr>=48&&chrctr<=57) {
+
+					if(document.all) { prcs.returnValue = false; } else { prcs.preventDefault(); }
+
+	}
+
+}
+
+				
+
+				
+			
+			
+		</script>
+	
+		<script>
+
+
+			
+		</script>
+		
+	</form>
+		
+		
+		
+		
+	</body>
+	
+	</html>
